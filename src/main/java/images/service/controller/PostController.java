@@ -18,8 +18,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import images.service.MD5;
-
 @Controller
 @RequestMapping("/post")
 public class PostController {
@@ -44,7 +42,7 @@ public class PostController {
 		String post = String.format(template, title, date, categories, tags, content);
 		try {
 			String path = belostPath + "/source/_posts";
-			String filename = MD5.md5(title) + ".html";
+			String filename = title.replace(' ', '-') + ".html";
 			File file = new File(path, filename);
 			BufferedWriter writer = new BufferedWriter(
 					new OutputStreamWriter(new FileOutputStream(file, false), "UTF-8"));
