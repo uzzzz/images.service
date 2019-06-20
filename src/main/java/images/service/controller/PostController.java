@@ -33,13 +33,20 @@ public class PostController {
 			+ "date: %s\r\n" //
 			+ "categories: %s\r\n"//
 			+ "tags: %s\r\n" //
+			+ "img: \"%s\"\r\n" //
 			+ "---\r\n" //
 			+ "%s";
 
 	@PostMapping("belost")
 	@ResponseBody
-	public String belost(String title, String date, String categories, String tags, String content) {
-		String post = String.format(template, title, date, categories, tags, content);
+	public String belost( //
+			String title, //
+			String date, //
+			String categories, //
+			String tags, //
+			String img, //
+			String content) {
+		String post = String.format(template, title, date, categories, tags, img, content);
 		try {
 			String path = belostPath + "/source/_posts";
 			String filename = title.replace(' ', '-') + ".html";
