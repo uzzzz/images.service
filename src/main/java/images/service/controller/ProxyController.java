@@ -39,6 +39,7 @@ public class ProxyController {
 			HttpURLConnection conn = (HttpURLConnection) u.openConnection();
 			conn.setRequestProperty("referer", ref);
 			in = conn.getInputStream();
+			response.setContentType(conn.getContentType());
 			out = response.getOutputStream();
 			IOUtils.copy(in, out);
 			out.flush();
