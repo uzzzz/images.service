@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -44,7 +45,7 @@ public class PostController {
 			String date, //
 			String categories, //
 			String tags, //
-			String img, //
+			@RequestParam(required = false, defaultValue = "") String img, //
 			String content) {
 		String post = String.format(template, title, date, categories, tags, img, content);
 		try {
