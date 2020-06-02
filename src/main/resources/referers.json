@@ -1,7 +1,7 @@
 {
-  img-blog.csdn.net: csdn.net,
-  img-blog.csdnimg.cn: csdn.net,
-  img0.tuicool.com: tuicool.com,
-  images0.cnblogs.com: www.cnblogs.com,
-  images2015.cnblogs.com: www.cnblogs.com
+  "img-blog.csdn.net": "csdn.net",
+  "img-blog.csdnimg.cn": "csdn.net",
+  "img0.tuicool.com": "tuicool.com",
+  "images0.cnblogs.com": "www.cnblogs.com",
+  "images2015.cnblogs.com": "www.cnblogs.com"
 }
