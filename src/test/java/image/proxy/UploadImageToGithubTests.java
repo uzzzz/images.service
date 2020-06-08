@@ -1,22 +1,15 @@
 package image.proxy;
 
 import images.service.ImagesServiceApplication;
-import images.service.data.GithubFileObject;
 import images.service.data.GithubFileUploader;
-import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.*;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Base64;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = ImagesServiceApplication.class)
